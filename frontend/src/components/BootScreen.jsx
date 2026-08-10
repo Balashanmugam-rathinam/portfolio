@@ -81,7 +81,6 @@ export default function BootScreen({ phase, setPhase, play }) {
       )
     );
 
-    // Only change made to fix the Vercel ESLint error
     const currentTimers = timers.current;
 
     return () => currentTimers.forEach(clearTimeout);
@@ -118,6 +117,7 @@ export default function BootScreen({ phase, setPhase, play }) {
                   'drop-shadow(0 0 14px rgba(225,29,72,0.5))',
               }}
             />
+
             BALA SYSTEM
             CLICK TO POWER ON
           </button>
