@@ -1,0 +1,156 @@
+{
+  "theme_and_concept": {
+    "concept": "Spider-Man: Brand New Day-inspired interactive computer desktop OS",
+    "vibe": "Tech-noir, cinematic, dark, mysterious, retro-premium pixel art",
+    "theme_mode": "dark",
+    "forbidden_elements": ["Pastel pink", "Lavender", "Scrolling landing page layouts", "Flat, generic SaaS designs"]
+  },
+  "typography": {
+    "fonts": [
+      {
+        "name": "Press Start 2P",
+        "type": "monospace",
+        "usage": "Headings, menu labels, buttons, terminal text, app titles, desktop icons",
+        "google_font": true
+      },
+      {
+        "name": "IBM Plex Mono",
+        "type": "monospace",
+        "usage": "Long descriptions, readable body text, complex code snippets",
+        "google_font": true
+      }
+    ],
+    "rules": [
+      "Use strict tracking (letter-spacing) for 'Press Start 2P' to prevent layout breaking.",
+      "Never center align body text; maintain left-alignment for readable OS windows.",
+      "Use text shadows (red/blue subtle pixel drop shadows) to enhance the retro tech-noir feel."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "desktop": "#050505",
+        "window": "rgba(15, 23, 42, 0.85)",
+        "menu_bar": "rgba(10, 10, 10, 0.75)"
+      },
+      "surface": {
+        "panel": "rgba(30, 41, 59, 0.8)",
+        "terminal": "#000000"
+      },
+      "primary": {
+        "spiderman_red": "#e11d48",
+        "glow_red": "#ff003c"
+      },
+      "secondary": {
+        "midnight_blue": "#0f172a",
+        "neon_blue": "#3b82f6"
+      },
+      "accent": {
+        "streetlight_orange": "#f97316",
+        "terminal_green": "#22c55e",
+        "web_white": "#f8fafc"
+      },
+      "text": {
+        "primary": "#f8fafc",
+        "secondary": "#94a3b8",
+        "muted": "#475569"
+      }
+    },
+    "rules": [
+      "No pure black #000000 except for the terminal background.",
+      "Window backgrounds MUST have backdrop-blur to simulate advanced translucent tech-noir glass.",
+      "Use Spider-Man red heavily for active states, hover glows, and the Spider-Sense indicator."
+    ]
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      "Dark Translucent Windows: Use backdrop-blur-md with a 1px border of rgba(255,255,255,0.1) and a subtle red/blue pixelated drop shadow.",
+      "Pixel Borders: Avoid smooth border-radius where possible. Use hard 0px radius or precise pixel-step borders using box-shadow techniques to mimic retro OS if desired, but 0px radius with 1px sharp borders works well for a modern-retro hybrid."
+    ],
+    "effects": [
+      "Spider-Sense Pulse: A red radial glow that expands and contracts behind interactive elements on hover.",
+      "Rain System: A subtle falling rain canvas or CSS animation in the background of the desktop and rooftop mode.",
+      "Web Strands: Subtle SVG lines connecting social nodes in the Social Connections app."
+    ],
+    "cursor": "Custom CSS cursor using a pixel art spider or crosshair. Disable on mobile.",
+    "parallax": "Subtle mouse-move parallax for the background image and sticky notes."
+  },
+  "layouts_and_grids": {
+    "desktop": "100vh, 100vw, overflow-hidden. A true OS environment. Elements are absolutely positioned or managed via a draggable window system.",
+    "dock": "Flexbox, bottom-center, floating. Icons scale up on hover (macOS style).",
+    "menu_bar": "Flexbox, top, w-full, h-8, fixed. Left and right justified content.",
+    "mobile": "Mobile phone OS (Spidey-Phone). Full-screen apps only. No window dragging. Vertical stack for desktop icons. Keep bottom dock."
+  },
+  "motion_and_interactions": {
+    "framer_motion": "Mandatory for window dragging (drag, dragConstraints), minimizing (scale down to dock), maximizing, and opening from icons.",
+    "hover_states": "Pixel-perfect hover states. Icons should glow and show a 'web' effect underneath on hover.",
+    "boot_sequence": "Initial loader must show a black screen, spider-web loading animation, typing text 'BALA SYSTEM INITIALIZING...' before revealing the desktop.",
+    "easter_eggs": "Keyboard shortcut triggers 'SPIDER-SENSE' mode (screen darkens, red/blue flashes, web lines)."
+  },
+  "components_and_apps": {
+    "window_manager": "Custom React component managing an array of open apps, their z-index, and minimized states. Include title bar with red/yellow/green retro dots.",
+    "desktop_icons": "Double-click to open apps. Single-click to select (highlight state).",
+    "terminal": "Interactive. Commands: help, about, projects, skills, mission, github, linkedin, instagram, contact, clear, sudo hire-bala.",
+    "suit_database": "Grid of pixel art representations of skills (Backend Suit, AI Suit).",
+    "spidey_phone_ticker": "On mobile view, a scrolling marquee 'Live Build' ticker at the top or bottom for the Canva project."
+  },
+  "media_and_images": {
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1631116612648-81db5027112a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxuZXclMjB5b3JrJTIwY2l0eSUyMHNreWxpbmUlMjBuaWdodCUyMHJhaW4lMjBkYXJrfGVufDB8fHx8MTc4NjMwODU0Nnww&ixlib=rb-4.1.0&q=85",
+        "usage": "Main Desktop Background / Rooftop Mode background (NYC Night)",
+        "category": "background"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1778259205831-cf8f8bfebc80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwxfHxyZXRybyUyMGNvbXB1dGVyJTIwdGVybWluYWwlMjBjb2RlJTIwZ3JlZW4lMjBzY3JlZW58ZW58MHx8fHwxNzg2MzA4NTQ2fDA&ixlib=rb-4.1.0&q=85",
+        "usage": "Terminal window backdrop or tech fallback image",
+        "category": "texture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1604149370100-2cf3be3bc845?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxzcGlkZXIlMjB3ZWIlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3ODYzMDg1NTN8MA&ixlib=rb-4.1.0&q=85",
+        "usage": "Spider web subtle overlay or Boot Screen loading asset",
+        "category": "texture"
+      }
+    ],
+    "icons": "Use 'lucide-react' for UI vectors, but rely on custom CSS pixel styling or FontAwesome retro packs if necessary. Prefer building pixelated SVGs inline for absolute accuracy to the 'pixel art' constraint."
+  },
+  "libraries": {
+    "required": [
+      "framer-motion (Window dragging, dock animations, boot screen)",
+      "lucide-react (Base icons, wrapped in pixelated filters)",
+      "react-draggable (Alternative to framer-motion for strict window management if preferred, but Framer Motion is requested)",
+      "react-tsparticles (Rain effect in the background)",
+      "react-fast-marquee (For the Live Build Spidey-Phone ticker)"
+    ]
+  },
+  "accessibility_and_testing": {
+    "focus_states": "High-contrast pixelated focus rings.",
+    "prefers_reduced_motion": "Respect by disabling rain, parallax, and intense flashes.",
+    "test_ids": "Every interactive desktop icon, menu item, dock item, window close button, and terminal input MUST have a data-testid."
+  },
+  "instructions_to_main_agent": [
+    "This is NOT a scrolling website. Do not build standard landing page sections.",
+    "Build a full-screen App container with overflow-hidden.",
+    "Implement a Window Context/State Provider to track opened windows, their coordinates, minimized status, and active z-index.",
+    "The Terminal is a core feature; build a robust command parser for the requested commands.",
+    "Ensure 'Press Start 2P' font is loaded correctly from Google Fonts.",
+    "Apply backdrop-filter for all opened windows to achieve the tech-noir glass look.",
+    "Mobile view should completely change the UX to 'Spidey-Phone' - apps open fullscreen, no dragging.",
+    "Add 'data-testid' to ALL critical interactive elements."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on the provided image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Use `sonner` for toasts, located in /app/src/components/ui/sonner.tsx (or .js)."
+  ]
+}
